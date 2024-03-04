@@ -1,0 +1,90 @@
+generated-timeseries:
+  - anomalies:
+      - kinds:
+          - kind: extremum
+            local: false
+            min: false
+        length: 1
+    base-oscillation:
+      amplitude: 1.0
+      frequency: 1.0
+      kind: sine
+      variance: 0
+    channels: 1
+    generation-id: 0
+    length: 1000
+    name: sine-noise-00%
+    semi-supervised: true
+    supervised: false
+  - anomalies:
+      - kinds:
+          - kind: extremum
+            local: false
+            min: false
+        length: 1
+    base-oscillation:
+      amplitude: 1.0
+      frequency: 1.0
+      kind: sine
+      variance: 0.01
+    channels: 1
+    generation-id: 1
+    length: 1000
+    name: sine-noise-01%
+    semi-supervised: true
+    supervised: false
+  - anomalies:
+      - kinds:
+          - kind: extremum
+            local: false
+            min: false
+        length: 1
+    base-oscillation:
+      amplitude: 1.0
+      frequency: 1.0
+      kind: sine
+      variance: 0.1
+    channels: 1
+    generation-id: 2
+    length: 1000
+    name: sine-noise-10%
+    semi-supervised: true
+    supervised: false
+  - anomalies:
+      - kinds:
+          - kind: extremum
+            local: false
+            min: false
+        length: 1
+    base-oscillation:
+      amplitude: 1.0
+      frequency: 1.0
+      kind: sine
+      variance: 0.3
+    channels: 1
+    generation-id: 3
+    length: 1000
+    name: sine-noise-30%
+    semi-supervised: true
+    supervised: false
+  - anomalies:
+      - kinds:
+          - kind: extremum
+            local: false
+            min: false
+        length: 1
+    base-oscillation:
+      amplitude: 1.0
+      frequency: 1.0
+      kind: sine
+      variance: 0.5
+    channels: 1
+    generation-id: 4
+    length: 1000
+    name: sine-noise-50%
+    semi-supervised: true
+    supervised: false
+meta:
+  download_link: https://gitlab.hpi.de/akita/guten-tag
+  git_commit_sha: null
+  seed: 12

@@ -1,0 +1,2 @@
+,AUC_ROC,AUC_PR,Precision,Recall,F,Precision_at_k,Rprecision,Rrecall,RF,R_AUC_ROC,R_AUC_PR,VUS_ROC,VUS_PR,Affiliation_Precision,Affiliation_Recall
+0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,0.9352413625138335,0.29954776529650184,0.925434827737431,0.2908496176087933,1.0,1.0

@@ -1,0 +1,72 @@
+base:
+  - &base-ts
+    length: 1000
+    channels: 1
+    semi-supervised: true
+    supervised: false
+
+sine:
+  - &sine-0
+    kind: "sine"
+    frequency: 1.0
+    amplitude: 1.0
+    variance: 0.10
+
+anomaly_kinds:
+  - &local-extremum
+    length: 1
+    kinds:
+      - kind: "extremum"
+        min: true
+        local: true
+        context_window: 50
+  - &global-extremum
+    length: 1
+    kinds:
+      - kind: "extremum"
+        min: false
+        local: false
+  - &pattern-0
+    length: 50
+    kinds:
+      - kind: "pattern"
+        sinusoid_k: 10.0
+
+
+timeseries:
+  # noise
+  - name: sine-noise-00%
+    <<: *base-ts
+    base-oscillation:
+      <<: *sine-0
+      variance: 0
+    anomalies:
+      - *pattern-0
+  - name: sine-noise-01%
+    <<: *base-ts
+    base-oscillation:
+      <<: *sine-0
+      variance: 0.01
+    anomalies:
+      - *global-extremum
+  - name: sine-noise-10%
+    <<: *base-ts
+    base-oscillation:
+      <<: *sine-0
+      variance: 0.1
+    anomalies:
+      - *global-extremum
+  - name: sine-noise-30%
+    <<: *base-ts
+    base-oscillation:
+      <<: *sine-0
+      variance: 0.3
+    anomalies:
+      - *global-extremum
+  - name: sine-noise-50%
+    <<: *base-ts
+    base-oscillation:
+      <<: *sine-0
+      variance: 0.5
+    anomalies:
+      - *global-extremum

@@ -1,0 +1,32 @@
+environment:
+  model_path: "models_trained"
+  is_train: true   # true or false
+  tensorboard: true # true or false
+  seed: 42
+  gpu: 0
+
+data:
+  dir: "data"
+  name: "linear"    # "linear", "sinusoidal", "intellab", "META"
+  batch_size: 1
+  seq_len: 8
+  step_size: 1
+  features: ["data"]
+
+model:
+  name: "AutoEncoder"    # "AutoEncoder", "LSTMAE"
+  in_channels: 1
+  hidden_dim: [6]
+  embedding_dim: 4
+  mode: "epistemic" # "normal", "aleatoric", "epistemic" or "combined"
+  dropout: 0.3
+
+train:
+  epochs: 100
+  learning_rate: 0.001
+  early_stopping_threshold: 3
+
+test:
+  model_name: ""  # if empty (''), the latest model will be used
+  mc_samples: 100
+  step_size: 4

@@ -1,0 +1,6 @@
+name: MA
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+prefix: /home/drx/miniconda3/envs/MA
